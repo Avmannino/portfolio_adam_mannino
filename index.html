@@ -19,58 +19,49 @@
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
 
-
-
-	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light animate__animated animate__zoomInDown" id="pb-navbar">
-
-		<div class="container">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-
-			<div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
-				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-portfolio">Portfolio</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-resume">Résumé</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-
+<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light animate__animated animate__zoomInDown" style="color: #ffffff;" id="pb-navbar">
+    <div class="container">
+        <button class="navbar-toggler" style="background-color: yellow;" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-md-center" style="color: #ffffff;" id="navbarsExample09">
+            <ul class="navbar-nav" style="color: #ffffff;">
+                <li class="nav-item" style="color: #ffffff;"><a class="nav-link" href="#section-home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-resume">Résumé</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 
 	<section class="site-hero animate__animated" style="background-image: url(images/image_1.jpg);" id="section-home" data-stellar-background-ratio="0.5">
 		<div class="container">
 			<div class="row intro-text align-items-center justify-content-center">
 				<div class="col-md-10 text-center pt-5">
-					<h1 class="site-heading animate__animated animate__fadeIn">Hello, I'm <strong class="d-block">Adam</strong></h1>
+					<h1 class="site-heading animate__animated animate__fadeInDown">Hi, I'm Adam</h1>
 					<strong class="d-block text-red text-uppercase letter-spacing animate__animated animate__fadeInUp">Full Stack Developer </strong>
-					<strong class="d-block text-white text-uppercase letter-spacing animate__animated animate__fadeInUpBig">📍NYC</strong>
+					<strong class="d-block text-white text-uppercase letter-spacing animate__animated animate__fadeInUp">📍NYC</strong>
 
 				</div>
 			</div>
 		</div>
 	</section>
 	
-	
-
 	<section class="site-section" id="section-portfolio">
 		<div class="container">
 			<div class="row">
 				<div class="section-heading text-center col-md-12">
-					<h2><strong>projects</strong></h2>
+					<h2><strong>Projects</strong></h2>
 				</div>
 			</div>
 			<div class="filters">
 				<ul>
-					<li class="active" data-filter="*">all</li>
-					<li data-filter=".javascript">javascript</li>
-					<li data-filter=".python">python</li>
+					<li class="active" data-filter="*">All</li>
+					<li data-filter=".javascript">Javascript</li>
+					<li data-filter=".python">Python</li>
 					<li data-filter=".typography">html</li>
 					<!-- <li data-filter=".photography">Photography</li> -->
 				</ul>
@@ -78,8 +69,8 @@
 
 			<div class="filters-content">
 				<div class="row grid">
-					<div class="single-portfolio col-sm-4 all javascript">
-						<div class="relative">
+					<div class="single-portfolio col-sm-4 all javascript" style="z-index: 9999;">
+						<div class="relative" style="z-index: 9999;">
 							<div class="thumb">
 								<div class="overlay overlay-bg"></div>
 								<img class="image img-fluid" style="min-width: 152%; margin-top: 10%; margin-left: -70%; border-radius: 15px;" src="images/teamsync.gif" alt="">
@@ -102,9 +93,11 @@
 						<div class="relative">
 							<div class="thumb">
 								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" style="min-width: 155%; margin-top: 7%; margin-left: -10%; border-radius: 15px;" src="images/p2.png" alt="">
+								<a href="https://main--ufc-database.netlify.app/">
+									<img class="image img-fluid" style="min-width: 155%; margin-top: 7%; margin-left: -10%; border-radius: 15px;" src="images/p2.png" alt="">
+								</a>
 							</div>
-							<a href="images/p2.png" class="img-pop-up">  
+							<a href="https://main--ufc-database.netlify.app/" class="img-pop-up">  
 								<div class="middle">
 									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
 								</div>
@@ -116,7 +109,8 @@
 							<div class="cat">front end - React JS, CSS</div>
 							<div class="cat">back end - Python, Flask SQL</div>
 						</div>                                         
-					</div>                            
+					</div>
+											
 					<div class="single-portfolio col-sm-4 all python">
 						<div class="relative">
 							<div class="thumb">
@@ -193,20 +187,19 @@
 	</section>
 	<!-- .section -->
 
-	
 	<section class="site-section " id="section-resume">
-		<div class="container">
-			<div class="row">
+		<div class="container" style="margin-top: 80px;">
+			<div class="row" style="margin-top: -105px;">
 				<div class="col-md-12 mb-5">
 					<div class="section-heading text-center">
-						<h2>My <strong>Résumé</strong></h2>
+						<h2 style="margin-top: 30px;">My <strong>Résumé</strong></h2>
 					</div>
 				</div>
 				<div class="col-md-6">
-					<h2 class="mb-5">Education</h2>
+					<h2 class="mb-5" style="margin-left: 40%;">Education</h2>
 					<div class="resume-item mb-4">
 						<span class="date"><span class="icon-calendar"></span> Jan, 2024 - Apr, 2024</span>
-						<h3>Software Engineering Graduate</h3>
+						<h3 style="font-size: 17px;">Software Engineering Graduate</h3>
 						<p>Graduated from Flatiron's full-time software engineering program with a primary focus on JavaScript, React, Python, SQL, Flask fundamentals and their individual implementations and practices.</p>
 						<span class="school">
 							<img src="images/flatiron.png" style="max-width: 8%; border-radius: 100px; margin-right: 10px;" alt="Tiny Image"> Flatiron School
@@ -215,29 +208,26 @@
 					
 
 					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> Sept 2010 - May, 2014.</span>
-						<h3>Bachelor of Business Administration (B.B.A)</h3>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+						<span class="date"><span class="icon-calendar"></span> Sept, 2010 - May, 2014.</span>
+						<h3 style="font-size: 17px;">Bachelor of Business Administration (B.B.A)</h3>
+						<p style="font-size: 14px;"></p>
 						<span class="school">
 							<img src="images/highpoint.webp" style="max-width: 9%; border-radius: 50px; margin-right: 10px;" alt="Tiny Image">High Point University</span>
 					</div>
 
 					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> March 2013 - Present</span>
+						<span class="date"><span class="icon-calendar"></span> Aug, 2006 - May, 2010</span>
 						<h3>HS Diploma, College Prep</h3>
 						<span class="school">
 							<img src="images/nvd.png" style="max-width: 9%; border-radius: 50px; margin-right: 10px;" alt="Tiny Image">Northern Valley Regional High School at Demarest</span>
 					</div>
-
-
 				</div>
+
 				<div class="col-md-6">
-
-
-					<h2 class="mb-5">Experience</h2>
+					<h2 class="mb-5" style="margin-left: 40%;">Experience</h2>
 					<div class="resume-item mb-4">
 						<span class="date"><span class="icon-calendar"></span> Jan, 2022 - Jul, 2023</span>
-						<h3>Assistant Vice President - MRSI</h3>
+						<h3 style="font-size: 17px;">Assistant Vice President - MRSI</h3>
 						<p>Responsible for the entire East Coast territory and Mid-West to Chicago (~50 brokerage offices). Total of $7.5M in Excess business ($4.5M Renewal; $3M New).</p>
 						<span class="school">
 							<img src="images/munichre.png" style="max-width: 7%; border-radius: 100px; margin-right: 4px;" alt="Tiny Image"> Munich Re
@@ -246,7 +236,7 @@
 
 					<div class="resume-item mb-4">
 						<span class="date"><span class="icon-calendar"></span> Dec, 2020 - Jul, 2021</span>
-						<h3>Assistant Vice President of Underwriting</h3>
+						<h3 style="font-size: 17px;">Assistant Vice President of Underwriting</h3>
 						<p>Implemented underwriting "box" and assisted in constructing overall program guidelines. Integral in the growth of the book to ~$9M in six months.</p>
 						<span class="school">
 							<img src="images/jencap.png" style="max-width: 7%; border-radius: 100px; margin-right: 4px;" alt="Tiny Image"> Jencap
@@ -255,7 +245,7 @@
 
 					<div class="resume-item mb-4">
 						<span class="date"><span class="icon-calendar"></span> Jul, 2017 - Dec, 2020</span>
-						<h3>Senior Underwriter</h3>
+						<h3 style="font-size: 17px;">Senior Underwriter</h3>
 						<p>Managed $12M in premium (2019). Underwrote domestic risk with premium range of $200,000-$1,500,000.  Responsible for executing quarterly team peer review audits. Entrusted by team leaders for quality control.</p>
 						<span class="school">
 							<img src="images/qbe.jpg" style="max-width: 7%; border-radius: 100px; margin-right: 4px;" alt="Tiny Image"> QBE North America
@@ -271,10 +261,6 @@
 						</span>
 					</div>
 					
-					
-					
-
-
 				</div>
 			</div>
 		</div>
@@ -286,18 +272,24 @@
 				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
 					<img src="images/about.jpg" style="max-width: 90%; border-radius: 100px; margin-left: 5%; margin-top: 10%;" alt="Image placeholder" class="img-fluid">
 				</div>
+
 				<div class="col-lg-5 pl-lg-5">
 					<div class="section-heading">
 						<h2 style="font-size: 25px; margin-top:10%; margin-left: 15%;">About <strong>Me</strong></h2>
 						<h1 style="margin-top: 0px; margin-left: 15%;"><strong>Adam Mannino</strong></h1>
 					</div>
 					<p class="lead" style="margin-left: 15%;">Software Engineer and Full Stack Developer based in NYC</p>
-					<p class="mb-5  " style="margin-left: 15%;"> I bring to the table a rich blend of technical expertise, creative problem-solving, and a passion for innovation in the software and technology sector. Seeking a dynamic role where I can contribute to developing cutting-edge solutions while continuing to grow and excel in my professional journey.</p>
+					<p class="mb-5  " style="margin-left: 15%;"> I bring to the table a rich blend of technical expertise, creative problem-solving, and a passion for innovation in the software and technology sector.
 
-					<p>
-						<a href="#section-contact" class="btn btn-primary px-4 py-2 btn-sm smoothscroll" style="background-color: #630a1c; margin-left: 15%;">Hire Me</a>
-						<a href="#" class="btn btn-secondary px-4 py-2 btn-sm" style="background-color: #afb25b; margin-left: 2%;">Download CV</a>
-					</p>
+						I began my career almost 10-years ago in the Insurance & Risk Management sector and eventually came to realize that coding & software is where my true passion lies.
+						
+						I've held managerial roles for risk portfolios exceeding $40 million, while regularly hitting retention goals and growth rate targets. I'm seeking a dynamic role from which I can continue to learn, as well as contribute to developing cutting-edge solutions and innovation.</p>
+
+						<p>
+							<a href="#section-contact" class="btn btn-primary px-4 py-2 btn-sm smoothscroll" style="background-color: #630a1c; margin-left: 15%;">Hire Me</a>
+							<a href="mannino_resume.pdf" download="mannino_resume.pdf" class="btn btn-secondary px-4 py-2 btn-sm" style="background-color: #afb25b; margin-left: 2%;">Download CV</a>
+						</p>
+						
 				</div>
 			</div>
 
@@ -422,9 +414,6 @@
 			</div>
 		</div>
 	</section> -->
-
-
-	
 
 	<section class="site-section" id="section-blog">
 		<div class="container">
@@ -553,12 +542,6 @@
 			</div>          
 		</div>
 	</footer>
-	
-	
-	
-
-
-
 
 	<script src="js/vendor/jquery.min.js"></script>
 	<script src="js/vendor/jquery-migrate-3.0.1.min.js"></script>

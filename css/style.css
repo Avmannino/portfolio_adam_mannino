@@ -1,7 +1,6 @@
 body {
-  background: #fff;
   color: rgba(255, 255, 255, 0.6);
-  background: #222;
+  background-color: #00041a;
   line-height: 1.7;
   font-size: 16px;
   font-weight: 300;
@@ -18,7 +17,6 @@ body {
   background: -moz-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   background: -ms-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -54,7 +52,8 @@ a {
   -webkit-transition: .3s all;
   -o-transition: .3s all;
   transition: .3s all;
-  color: #c98164;
+  color: #ffffff;
+
 }
 
 a:hover,
@@ -69,6 +68,35 @@ a:active {
   padding: 15px 20px !important;
 }
 
+.drawer {
+  position: relative;
+  top: 0;
+  right: -250px; /* Start drawer off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: #f0f0f0;
+  transition: right 0.3s ease;
+  z-index: 9999;
+}
+
+.drawer-content {
+  padding: 20px;
+  color:red
+}
+
+.drawer.open {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
+
 .site-navbar {
   border: none;
   -webkit-box-shadow: none;
@@ -80,8 +108,9 @@ a:active {
   top: 20px;
   width: 100%;
   z-index: 200;
-  background-color: #00000002;
-  transition: 1.3s ease;
+  background-color: #00000000;
+  transition: 1s ease;
+  color: #ffffff;
 }
 
 .site-navbar .navbar-brand {
@@ -101,20 +130,15 @@ a:active {
   background: transparent !important;
 }
 
-@media (max-width: 991.98px) {
-  .site-navbar.bg-light {
-    background: #fff !important;
-    top: 0;
-  }
 
   .site-navbar.bg-light .navbar-brand {
     display: inline-block;
     font-size: 18px;
     border: 2px solid #000;
     padding: 2px 10px !important;
-    color: #000;
+    color: #ffffff;
   }
-}
+
 
 .site-navbar .navbar-nav>li>a {
   color: #fff !important;
@@ -126,14 +150,10 @@ a:active {
   letter-spacing: .2em;
 }
 
-@media (max-width: 991.98px) {
-  .site-navbar .navbar-nav>li>a {
-    color: rgba(0, 0, 0, 0.7) !important;
-  }
-}
+
 
 .site-navbar .navbar-nav.active>a {
-  color: #bac964 !important;
+  color: #ffffff !important;
 }
 
 .site-navbar.scrolled {
@@ -141,31 +161,23 @@ a:active {
   -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.09);
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.09);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
+  top: 22%; /* Adjust the top position as needed */
+  left: -5.5%; /* Adjust the left position as needed */
+  z-index: 1; /* Ensure the navbar is above other content */
+  transition: left 3.6s ease-in-out; /* Add a smooth transition effect with ease-in-out timing function */
+  width: 20%; /* Adjust the width of the navbar as needed */
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
   transform: translateY(0%);
+  color: #ffffff;
 }
 
-.site-navbar.scrolled.bg-light {
-  background: rgb(99, 10, 28) !important;
-}
-
-.site-navbar.scrolled .navbar-brand {
-  display: inline-block;
-  font-size: 18px;
-  border: 2px solid #000;
-  padding: 2px 10px !important;
-}
 
 .site-navbar.scrolled.awake,
 .site-navbar.scrolled.sleep {
-  -webkit-transition: .3s all ease;
-  -o-transition: .3s all ease;
-  transition: .3s all ease;
+  -webkit-transition: .6s all ease;
+  -o-transition: .6s all ease;
+  transition: .6s all ease;
 }
 
 .site-navbar.scrolled.awake {
@@ -173,6 +185,7 @@ a:active {
   -ms-transform: translateY(0%);
   transform: translateY(0%);
   background: #fff !important;
+  color: #ffffff;
 }
 
 .site-navbar.scrolled.sleep {
@@ -183,16 +196,31 @@ a:active {
 }
 
 .site-navbar.scrolled .navbar-brand {
-  color: #000;
+  display: none; /* Hide the navbar brand when scrolled */
 }
 
-.site-navbar.scrolled .dropdown>a:before {
-  color: rgba(255, 255, 255, 0.4);
+.site-navbar.scrolled .navbar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px; /* Adjust the gap between items as needed */
+}
+
+.site-navbar.scrolled .navbar-nav>li {
+  margin-bottom: 10px; /* Adjust the margin between items as needed */
 }
 
 .site-navbar.scrolled .navbar-nav>li>a {
-  color: rgba(0, 0, 0, 0.7) !important;
+  color: #ffffff !important;
+  padding: 10px 15px; /* Adjust the padding as needed */
 }
+
+.site-navbar.scrolled .navbar-nav>li>a:hover {
+  background-color: #555; /* Adjust the background color on hover */
+}
+
+
+
 
 .site-navbar.scrolled .navbar-nav>li>a:hover {
   color: #bac964 !important;
@@ -234,10 +262,11 @@ a:active {
 
 .site-hero h1 {
   font-weight: 100;
-  margin-bottom: 20px;
   display: block;
   animation-duration: 1.7s;
   /* Adjust the duration as needed */
+  position: relative;
+  top: -12vh;
 }
 
 .site-heading {
@@ -246,17 +275,20 @@ a:active {
 
 .site-hero h1 strong {
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.863) !important;
+  color: rgba(85, 64, 64, 0.863) !important;
 }
 
 @media (min-width: 768px) {
   .site-hero h1 {
-    font-size: 70px;
+    font-size: 80px;
   }
 }
 
 .site-hero .intro-text .text-red {
   color: crimson !important;
+  margin-top: -10px;
+  position: relative;
+  top: -10vh;
 }
 
 
@@ -265,6 +297,7 @@ a:active {
 .site-hero .lead {
   font-weight: 100;
   color: #ffffff9a;
+  
 }
 
 .site-hero .lead {
@@ -280,6 +313,7 @@ a:active {
 
 .site-section {
   padding: 5em 0;
+  
 }
 
 .section-heading {
@@ -665,13 +699,7 @@ a:active {
   transition: all 0.2s ease-in-out;
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
-  .thumb .overlay-bg {
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
-  }
-}
+
 
 .resume-item {
   padding: 30px;
@@ -888,4 +916,7 @@ a:active {
 .letter-spacing {
   letter-spacing: .2rem;
   color: rgba(255, 255, 255, 0.5) !important;
+  position: relative;
+  top: -9vh;
 }
+
