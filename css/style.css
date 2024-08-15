@@ -1,6 +1,6 @@
 body {
-  color: rgba(255, 255, 255, 0.6);
-  background-color: #00041a;
+  color: rgb(255, 255, 255);
+  background-color: #010013;
   line-height: 1.7;
   font-size: 16px;
   font-weight: 300;
@@ -123,7 +123,7 @@ a:active {
 }
 
 .site-navbar .navbar-brand:hover {
-  color: #fff;
+  color: #b2c251;
 }
 
 .site-navbar.bg-light {
@@ -235,7 +235,7 @@ a:active {
 }
 
 .site-hero {
-  background-color: #000835;
+  background-color: #000000;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
