@@ -7,7 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<link rel="stylesheet" href="css/flexslider.css">
 	<link rel="stylesheet" href="fonts/icomoon/style.css">
@@ -21,7 +23,8 @@
 </head>
 
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="400">
-	<section class="site-hero animate__animated" style="background-image: url(images/landing_background.png);" id="section-home" data-stellar-background-ratio="0.5">
+	<section class="site-hero animate__animated" style="background-image: url(images/landing_background.png);"
+		id="section-home" data-stellar-background-ratio="0.5">
 		<div class="container">
 			<div class="row intro-text align-items-center justify-content-center">
 				<div class="col-md-10 text-center pt-5">
@@ -30,17 +33,19 @@
 						<li>
 							<a href="https://www.blogger.com/blogger.g?blogID=1719501309664700552">Projects</a>
 							<ul class="submenu">
-						<li><a href="https://www.blogger.com/blogger.g?blogID=1719501309664700552">HTML</a></li>
-						<li><a href="https://www.blogger.com/blogger.g?blogID=1719501309664700552">React</a></li>
-						<li><a href="https://www.blogger.com/blogger.g?blogID=1719501309664700552">Python</a></li>
-						</ul>
+								<li><a href="https://www.blogger.com/blogger.g?blogID=1719501309664700552">HTML</a></li>
+								<li><a href="https://www.blogger.com/blogger.g?blogID=1719501309664700552">React</a>
+								</li>
+								<li><a href="https://www.blogger.com/blogger.g?blogID=1719501309664700552">Python</a>
+								</li>
+							</ul>
 						</li>
 						<li><a href="https://www.blogger.com/blogger.g?blogID=1719501309664700552">Resumé</a></li>
 						<li><a href="https://www.blogger.com/blogger.g?blogID=1719501309664700552">About Me</a></li>
 						<li><a href="https://www.blogger.com/blogger.g?blogID=1719501309664700552">Blog</a></li>
 						<li><a href="https://www.blogger.com/blogger.g?blogID=1719501309664700552">Contact</a></li>
 
-						</ul>
+					</ul>
 					<h1 class="site-heading animate__animated animate__fadeIn">Hi, I'm Adam.</h1>
 					<strong
 						class="d-block text-red text-uppercase letter-spacing animate__animated animate__flipInX">Full
@@ -51,7 +56,8 @@
 						<div class="btn gh-btn" onclick="window.open('https://github.com/Avmannino', '_blank')">
 							<i class="fa fa-github" aria-hidden="true" id="gh"></i>
 						</div>
-						<div class="btn li-btn" onclick="window.open('https://www.linkedin.com/in/adam-mannino-b00a7261/', '_blank')">
+						<div class="btn li-btn"
+							onclick="window.open('https://www.linkedin.com/in/adam-mannino-b00a7261/', '_blank')">
 							<i class="fa fa-linkedin" aria-hidden="true" id="li"></i>
 						</div>
 						<div class="btn ig-btn" onclick="window.open('https://www.instagram.com/avmannino/', '_blank')">
@@ -66,13 +72,27 @@
 		</div>
 	</section>
 
-	<section class="site-section" id="section-portfolio">
-		<div class="container">
-			<div class="row">
-				<div class="section-heading text-center col-md-12">
-					<h2><strong>Projects</strong></h2>
-				</div>
+	<section class="site-section" id="section-portfolio" style="position: relative; min-height: 400px;">
+		<img 
+		  src="images/projects_background.png"
+		  style="
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			filter: blur(40px);
+			z-index: -1;
+		  "
+		  alt="proj-background"
+		>
+		<div class="container" style="position: relative; z-index: 1;">
+		  <div class="row">
+			<div class="section-heading text-center col-md-12">
+			  <h2><strong>Projects</strong></h2>
 			</div>
+		  </div>
 			<div class="filters">
 				<ul>
 					<li class="active" data-filter="*">All</li>
@@ -90,7 +110,7 @@
 							<div class="thumb">
 								<div class="overlay overlay-bg"></div>
 								<img class="image img-fluid"
-									style="min-width: 140%; margin-top: 10%; margin-left: -70%; border-radius: 25px;"
+									style="min-width: 120%; margin-top: 25%; margin-left: -55%; border-radius: 25px;"
 									src="images/spottr.gif" alt="">
 							</div>
 						</div>
@@ -110,7 +130,7 @@
 							<div class="thumb">
 								<div class="overlay overlay-bg"></div>
 								<img class="image img-fluid"
-									style="min-width: 150%; margin-top: 15%; margin-left: -20%; border-radius: 15px;"
+									style="min-width: 125%; height: 230px; margin-top: 25%; margin-left: -10%; border-radius: 25px;"
 									src="images/teamsync.gif" alt="">
 							</div>
 							<a href="images/p1.jpg" class="img-pop-up">
@@ -133,11 +153,11 @@
 							<div class="thumb">
 								<div class="overlay overlay-bg"></div>
 								<img class="image img-fluid"
-									style="min-width: 140%; margin-top: 17%; margin-left: 40%; border-radius: 15px;"
+									style="min-width: 135%; margin-top: 24%; margin-left: 36%; border-radius: 25px;"
 									src="images/p2.png" alt="">
 							</div>
 						</div>
-						<div class="p-inner" style="margin-left: 60%; margin-top: 10%; min-width: 100%;">
+						<div class="p-inner" style="margin-left: 52%; margin-top: 10%; min-width: 100%;">
 							<h4>UFC Database App</h4>
 							<a href="https://main--ufc-database.netlify.app/"
 								style="font-size: 0.9em; color: #bac964; display: block; margin-top: 5px;">*Click
@@ -153,7 +173,7 @@
 							<div class="thumb">
 								<div class="overlay overlay-bg"></div>
 								<img class="image img-fluid"
-									style="max-width: 100%; margin-top: 0px; margin-left: -50%; border-radius: 15px;"
+									style="max-width: 100%; margin-top: 50px; margin-left: 0%; border-radius: 25px;"
 									src="images/starblitz.gif" alt="">
 							</div>
 							<a href="images/starblitz.gif" class="img-pop-up"
@@ -164,7 +184,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="p-inner" style="margin-left: -100%; min-width: 100%;">
+						<div class="p-inner" style="margin-top: 10%; margin-left: 0%; min-width: 100%;">
 							<h4>STARBLITZ</h4>
 							<div class="desc">Space Shooter Game</div>
 							<div class="cat">Python</div>
@@ -233,7 +253,7 @@
 			<div class="row" style="margin-top: -105px;">
 				<div class="col-md-12 mb-5">
 					<div class="section-heading text-center">
-						<h2 style="margin-top: 30px;">My <strong>Resumé</strong></h2>
+						<h2 style="margin-top: 20px;">My <strong>Resumé</strong></h2>
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -336,14 +356,21 @@
 
 				<div class="col-lg-5 pl-lg-5">
 					<div class="section-heading">
-						<h2 style="font-size: 35px; margin-bottom:75%; margin-top: -5%; margin-left: -45%;">About <strong>Me</strong></h2>
-						<h1 style="margin-bottom: -4%; margin-top: -40%; margin-left: 25%; font-size: 27px;"><strong>Adam Mannino</strong></h1>
+						<h2 style="font-size: 35px; margin-bottom:75%; margin-top: -5%; margin-left: -45%;">About
+							<strong>Me</strong></h2>
+						<h1 style="margin-bottom: -4%; margin-top: -40%; margin-left: 25%; font-size: 27px;">
+							<strong>Adam Mannino</strong></h1>
 					</div>
-					<p class="mb-5  " style="margin-left: 15%;"> 
-						<p>I began my career almost 10-years ago in the Insurance & Risk Management sector and eventuallycame to realize that coding & software is where my true passion lies.</p>
-						<p>I've held managerial roles for risk portfolios exceeding $40 million, while regularly hitting retention goals and growth rate targets.</p>
-						<p>I combine robust technical expertise, creative problem-solving, and an unwavering drive to learn something new everyday. I’m seeking a dynamic position that challenges me, fosters learning, and enables me to deliver measurable results.</p>
-						<p>I enjoy a good cup of coffee, watching popular shows and movies, losing myself in an RPG, and anything to do with hockey (and the NY Rangers).</p>
+					<p class="mb-5  " style="margin-left: 15%;">
+					<p>I began my career almost 10-years ago in the Insurance & Risk Management sector and
+						eventuallycame to realize that coding & software is where my true passion lies.</p>
+					<p>I've held managerial roles for risk portfolios exceeding $40 million, while regularly hitting
+						retention goals and growth rate targets.</p>
+					<p>I combine robust technical expertise, creative problem-solving, and an unwavering drive to learn
+						something new everyday. I’m seeking a dynamic position that challenges me, fosters learning, and
+						enables me to deliver measurable results.</p>
+					<p>I enjoy a good cup of coffee, watching popular shows and movies, losing myself in an RPG, and
+						anything to do with hockey (and the NY Rangers).</p>
 					</p>
 
 					<div class="about-buttons">
@@ -352,7 +379,9 @@
 						<a href="mannino_resume.pdf" download="mannino_resume.pdf"
 							class="btn btn-secondary px-4 py-2 btn-sm"
 							style="background-color: #0069645f; margin-top:-20%; margin-left: 20%;">Resumé</a>
-							<p style="font-family: Landing; font-size: 13px; text-decoration: underline; margin-left: 16%; margin-top: 2%;">Click to download</p>
+						<p
+							style="font-family: Landing; font-size: 13px; text-decoration: underline; margin-left: 16%; margin-top: 2%;">
+							Click to download</p>
 					</div>
 
 				</div>
