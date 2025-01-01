@@ -40,9 +40,11 @@ h2,
 h3,
 h4,
 h5 {
-  color: #fff;
+  color: #c2c2c2;
   font-weight: 200;
 }
+
+
 
 h2 {
   font-size: 25px;
@@ -100,6 +102,7 @@ a:active {
 .cf:after {
     content: " ";
     display: table;
+    
 }
 
 .cf:after {
@@ -109,8 +112,9 @@ a:active {
 .cf {
   zoom: 1;
   position: absolute;
-  top: 60vh;
-  right:8vw;
+  top: 52vh;
+  right:9vw;
+  animation-delay: 1s;
 }
 
 .menu,
@@ -140,8 +144,9 @@ a:active {
  color: #fff;
  text-transform: uppercase;
  text-decoration: none;
- font-family: Arial, Helvetica;
- font-size: 13px;
+ font-family: Landing;
+ font-size: 11.5px;
+ font-weight: normal;
 }  
 
 .menu li:hover {
@@ -283,9 +288,9 @@ a:active {
   letter-spacing: .2rem;
   color: rgba(0, 200, 255, 0.668) !important;
   position: relative;
-  top: 26.5vh;
+  top: 24.7vh;
   left: 1vw;
-  animation-delay: 1s;
+  animation-delay: 1.2s;
   font-family: Landing;
 }
 
@@ -305,7 +310,7 @@ a:active {
 
 @media (min-width: 768px) {
   .site-hero h1 {
-    font-size: 55px;
+    font-size: 4.2em;
   }
 }
 
@@ -345,7 +350,7 @@ a:active {
   height: 100vh;
   width: 100vw;
   position: relative;
-  bottom: 14vh;
+  bottom: 22vh;
   left: 20vw;
   z-index: 9999;
   animation-delay: 1s;
@@ -457,6 +462,7 @@ padding: 5em 0;
 .lead {
   font-weight: 200;
   line-height: 1.5;
+  font-size: 16px;
 }
 
 .site-service-item {
@@ -554,6 +560,18 @@ padding: 5em 0;
 
 .btn.btn-primary {
   color: #fff;
+  width:80px;
+  height: 80px;
+  font-size:12px;
+  border: 1px solid #c2c2c2;
+}
+
+.btn.btn-secondary {
+  color: #fff;
+  width:80px;
+  height: 80px;
+  font-size:12px;
+  border: 1px solid #c2c2c2;
 }
 
 .btn.btn-primary:hover,
