@@ -1,10 +1,15 @@
 body {
   color: rgb(255, 255, 255);
-  background-color: #010013;
+  background-color: #000000;
   line-height: 1.7;
   font-size: 16px;
   font-weight: 300;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 .p1-gradient-bg,
 .thumb .overlay-bg {
@@ -110,10 +115,11 @@ a:active {
 }
 
 .cf {
+  position: absolute; /* Or absolute, depending on scrolling behavior */
+  top: 50%; /* 50% from the top of the viewport */
+  left: 28%; /* 50% from the left of the viewport */
+  transform: translate(-50%, -50%); /* True centering by adjusting for the element's dimensions */
   zoom: 1;
-  position: absolute;
-  top: 52vh;
-  right:9vw;
   animation-delay: 1s;
 }
 
@@ -133,7 +139,7 @@ a:active {
 }
 
 .menu > li {
- background: #004367;
+ background: #082e63;
  float: left;
  position: relative;
  transform: skewX(25deg);
@@ -150,7 +156,7 @@ a:active {
 }  
 
 .menu li:hover {
- background: #3c94e7;
+  background-color: #18174f90;
 }  
 
 .menu > li > a {
@@ -289,7 +295,7 @@ a:active {
   color: rgba(0, 200, 255, 0.668) !important;
   position: relative;
   top: -11.5vh;
-  left: 0vw;
+  left: 1vw;
   animation-delay: 1.2s;
   font-family: Landing;
 }
@@ -472,6 +478,8 @@ padding: 5em 0;
   font-weight: 200;
   padding-top: 20px;
   font-size: 30px;
+  margin-top: -5%;
+  font-family: Landing;
 }
 
 .section-heading h2 strong {
