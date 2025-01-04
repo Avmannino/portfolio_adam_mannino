@@ -78,7 +78,7 @@ a:active {
 .drawer {
   position: relative;
   top: 0;
-  right: -250px; /* Start drawer off-screen */
+  right: -250px;
   width: 250px;
   height: 100%;
   background-color: #f0f0f0;
@@ -102,7 +102,7 @@ a:active {
   }
 }
 
-/* Menu Dropdown */
+
 .cf:before,
 .cf:after {
     content: " ";
@@ -115,16 +115,15 @@ a:active {
 }
 
 .cf {
-  position: absolute; /* Or absolute, depending on scrolling behavior */
-  top: 50%; /* 50% from the top of the viewport */
-  left: 28%; /* 50% from the left of the viewport */
-  transform: translate(-50%, -50%); /* True centering by adjusting for the element's dimensions */
+  position: absolute; 
+  top: 150%; 
+  left: 28%; 
+  transform: translate(-50%, -50%); 
   zoom: 1;
   animation-delay: 1s;
 }
 
-.menu,
-.submenu {
+.menu {
  margin: 0;
  padding: 0;
  list-style: none;
@@ -143,6 +142,8 @@ a:active {
  float: left;
  position: relative;
  transform: skewX(25deg);
+ box-shadow: 0 5px 10px #6a699297;
+ 
 }
 
 .menu a {
@@ -162,71 +163,6 @@ a:active {
 .menu > li > a {
  transform: skewX(-25deg);
  padding: 1em 2em;
-}
-
-/* Dropdown */
-.submenu {
- position: absolute;
- width: 200px;
- left: 50%; margin-left: -100px;
- transform: skewX(-25deg);
- transform-origin: left top;
-}
-
-.submenu li {
- background-color: #34495e;
- position: relative;
- overflow: hidden;  
-}      
-
-.submenu > li > a {
- padding: 1em 2em;   
-}
-
-.submenu > li::after {
- content: '';
- position: absolute;
- top: -125%;
- height: 100%;
- width: 100%;   
- box-shadow: 0 0 50px rgba(0, 0, 0, .9);   
-}  
-
-.submenu > li:nth-child(odd){
- transform: skewX(-25deg) translateX(0);
-}
-
-.submenu > li:nth-child(odd) > a {
- transform: skewX(25deg);
-}
-
-.submenu > li:nth-child(odd)::after {
- right: -50%;
- transform: skewX(-25deg) rotate(3deg);
-}    
-
-.submenu > li:nth-child(even){
- transform: skewX(25deg) translateX(0);
-}
-
-.submenu > li:nth-child(even) > a {
- transform: skewX(-25deg);
-}
-
-.submenu > li:nth-child(even)::after {
- left: -50%;
- transform: skewX(25deg) rotate(3deg);
-}
-
-/* Show dropdown */
-.submenu,
-.submenu li {
- opacity: 0;
- visibility: hidden;   
-}
-
-.submenu li {
- transition: .2s ease transform;
 }
 
 .menu > li:hover .submenu,
@@ -269,14 +205,14 @@ a:active {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  backdrop-filter: blur(38px); /* Apply blur only to the background */
-  -webkit-backdrop-filter: blur(8px); /* For Safari */
-  z-index: 1; /* Keep the blur layer below the content */
+  backdrop-filter: blur(38px);
+  -webkit-backdrop-filter: blur(8px); 
+  z-index: 1; 
 }
 
 .site-hero .container {
   position: relative;
-  z-index: 2; /* Ensure content stays above the blurred background */
+  z-index: 2; 
 }
 
 .site-hero h1 {
@@ -285,7 +221,7 @@ a:active {
   animation-duration: 1.7s;
   animation-delay: .5s;
   position: relative;
-  top: -13vh;
+  top: -11vh;
   left: 1vw;
   font-family: Landing;
 }
@@ -294,16 +230,63 @@ a:active {
   letter-spacing: .2rem;
   color: rgba(0, 200, 255, 0.668) !important;
   position: relative;
-  top: -11.5vh;
+  top: -9.5vh;
   left: 1vw;
   animation-delay: 1.2s;
   font-family: Landing;
 }
 
 @font-face {
-  font-family: 'Landing'; /* Name of the font */
-  src: url('/fonts/landing.otf') format('opentype'); /* Correct format for .otf files */
+  font-family: 'Landing';
+  src: url('/fonts/landing.otf') format('opentype'); 
 }
+
+#section-home {
+  position: relative; 
+}
+
+.map-container {
+  position: absolute; 
+  top: -195%; 
+  left: 115%;
+  width: 30%; 
+  height: 190px;
+  z-index: 10;
+  animation-delay: 1.5s;
+}
+
+.responsive-map {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 7px 13px #6a699297;
+  filter: invert(90%) hue-rotate(180deg);
+  border: none;
+}
+
+.blinking-circle {
+  position: absolute; 
+  top: 52%; 
+  left: 55%; 
+  transform: translate(-50%, -50%);
+  width: 9px;
+  height: 9px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  animation: blink 1.5s infinite;
+  box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5);
+}
+
+@keyframes blink {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+}
+
+
 
 .site-heading {
   color: rgb(255, 255, 255);
@@ -324,7 +307,7 @@ a:active {
   color: #c2c2c2 !important;
   margin-top: -10px;
   position: relative;
-  top: -12vh;
+  top: -10vh;
   left: 1vw;
   font-family: Landing;
   animation-delay: .8s;
@@ -350,12 +333,12 @@ a:active {
 .socials-container-wrapper {
   position: fixed;
   top: 24vh;
-  right: 3vw;
+  left: 1vw;
   z-index: 9999;
-  opacity: 0; /* Start completely invisible */
-  animation: fadeInDown 1s ease-in-out;
-  animation-delay: 1.7s; /* Adds a 1-second delay */
-  animation-fill-mode: forwards; /* Ensures the final state of the animation persists */
+  opacity: 0; 
+  animation: fadeInRight 1s ease-in-out;
+  animation-delay: 1.7s; 
+  animation-fill-mode: forwards; 
 }
 
 .socials-container {
@@ -365,32 +348,32 @@ a:active {
   justify-content: center;
   align-items: center;
   animation: bobbing 2s infinite ease-in-out;
-  animation-delay: 2s; /* Starts bobbing after fadeInDown completes */
+  animation-delay: 2s;
 }
 
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(-20px); /* Start slightly above */
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0); /* Final position */
+    transform: translateY(0); 
   }
 }
 
 @keyframes bobbing {
   0%, 100% {
-    transform: translateY(-5px); /* Slightly up */
+    transform: translateY(-5px); 
   }
   50% {
-    transform: translateY(5px); /* Slightly down */
+    transform: translateY(5px); 
   }
 }
 
 .btn {
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
   background-color: #c2c2c2;
   display: flex;
   align-items: center;
@@ -849,8 +832,8 @@ padding: 5em 0;
 }
 
 .single-portfolio .image {
-  width: 120%; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 120%; 
+  height: auto; 
 }
 
 
@@ -970,22 +953,18 @@ padding: 5em 0;
 }
 
 .form-control::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
   color: rgba(255, 255, 255, 0.5);
 }
 
 .form-control::-moz-placeholder {
-  /* Firefox 19+ */
   color: rgba(255, 255, 255, 0.5);
 }
 
 .form-control:-ms-input-placeholder {
-  /* IE 10+ */
   color: rgba(255, 255, 255, 0.5);
 }
 
 .form-control:-moz-placeholder {
-  /* Firefox 18- */
   color: rgba(255, 255, 255, 0.5);
 }
 
