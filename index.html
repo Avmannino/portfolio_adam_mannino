@@ -50,7 +50,6 @@
 						<li><a href="#section-resume">Resumé</a></li>
 						<li><a href="#section-about">About Me</a></li>
 						<li><a href="#section-blog">Blog</a></li>
-						<li><a href="#section-contact">Contact</a></li>
 					</ul>
 					<h1 class="site-heading animate__animated animate__fadeIn">Hi, I'm Adam.</h1>
 					<strong
@@ -77,16 +76,6 @@
 							</div>
 						</div>
 					</div>
-					<div class="map-container animate__animated animate__fadeInDown">
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12043.672981090943!2d-74.01550498459617!3d40.72232304538908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a181f0bcd77%3A0xdbda3b846b3499c6!2sZIP%20Code%2010007%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-							class="responsive-map"
-							allowfullscreen=""
-							loading="lazy">
-						</iframe>
-						<div class="blinking-circle"></div>
-					</div>
-					
 				</div>
 			</div>
 		</div>
@@ -330,10 +319,19 @@
 			z-index: -1;
 		  " alt="proj-background">
 		<div class="container">
+			<div class="map-container">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12043.672981090943!2d-74.01550498459617!3d40.72232304538908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a181f0bcd77%3A0xdbda3b846b3499c6!2sZIP%20Code%2010007%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+					class="responsive-map"
+					allowfullscreen=""
+					loading="lazy">
+				</iframe>
+				<div class="blinking-circle"></div>
+			</div>
 			<div class="row mb-5 align-items-center">
 				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
 					<img src="images/about.jpg"
-						style="max-width: 85%; border-radius: 100px; margin-left: 10%; margin-top: 10%;"
+						style="max-width: 75%; border-radius: 100px; margin-left: 10%; margin-top: 5%;"
 						alt="Image placeholder" class="img-fluid">
 				</div>
 
@@ -342,13 +340,13 @@
 						<h2 style="font-size: 35px; margin-bottom:75%; margin-top: -15%; margin-left: -45%;">About
 							<strong>Me</strong>
 						</h2>
-						<h1 style="margin-bottom: -4%; margin-top: -60%; margin-left: 25%; font-size: 27px;">
+						<h1 style="margin-bottom: -4%; margin-top: -55%; margin-left: 25%; font-size: 27px; font-weight: bolder">
 							<strong>Adam Mannino</strong>
 						</h1>
 					</div>
 					<p class="mb-5  " style="margin-left: 15%;">
 					<p>I began my career almost 10-years ago in the Insurance & Risk Management sector and
-						eventuallycame to realize that coding & software is where my true passion lies.</p>
+						eventually came to realize that coding & software is where my true passion lies.</p>
 					<p>I've held managerial roles for risk portfolios exceeding $40 million, while regularly hitting
 						retention goals and growth rate targets.</p>
 					<p>I combine robust technical expertise, creative problem-solving, and an unwavering drive to learn
@@ -358,17 +356,24 @@
 						anything to do with hockey (and the NY Rangers).</p>
 					</p>
 
-					<div class="about-buttons">
-						<a href="#section-contact" class="btn btn-primary px-4 py-2 btn-sm smoothscroll"
-							style="background-color: #2e56007a; margin-top:8%; margin-left: 55%;">Contact</a>
-						<a href="mannino_resume.pdf" download="mannino_resume.pdf"
-							class="btn btn-secondary px-4 py-2 btn-sm"
-							style="background-color: #0069645f; margin-top:-20%; margin-left: 20%;">Resumé</a>
-						<p
-							style="font-family: Landing; font-size: 13px; text-decoration: underline; margin-left: 16%; margin-top: 2%;">
-							Click to download</p>
-					</div>
-
+					<div class="container">
+						<div class="row" style="border:0.5px solid rgb(136, 136, 136); background-color:rgba(0, 255, 221, 0.268); border-radius:10px; width: 110%; max-height:0px; margin-right: 10%; margin-top: 10%;">
+							<div class="col-md-12 mb-5">
+								<div class="section-heading text-center" style="font-size: 22px;">
+									<h2 style="font-size: 30px; margin-top: -10px">Get <strong>In-Touch</strong></h2>
+									<ul class="site-contact-details">
+										<li>
+											<a href="mailto:amannino92@gmail.com" class="email-link">
+												📧 Amannino92@gmail.com
+											</a>
+										</li>
+										<div class="resume-button">
+											<a href="mannino_resume.pdf" download="mannino_resume.pdf">Download My Resumé</a>
+										</div>
+									</ul>
+								</div>
+							</div>
+						</div>
 				</div>
 			</div>
 
@@ -376,7 +381,7 @@
 		</div>
 	</section>
 
-	<section class="site-section" id="section-blog" style="position: relative; min-height: 400px;">
+	<section class="site-section" id="section-blog" style="position: relative; top: 35vh; min-height: 400px;">
 		<img src="images/blog_background.png" style="
 			position: absolute;
 			top: 5%;
@@ -387,11 +392,11 @@
 			filter: blur(30px);
 			z-index: -1;
 		  " alt="proj-background">
-		<div class="container">
+		<div class="container" style="background-color: rgba(128, 128, 128, 0.137); border-radius:15px; height: 785px; padding-bottom: 75px">
 			<div class="row">
 				<div class="col-md-12 mb-5">
 					<div class="section-heading text-center">
-						<h2>Blog on <strong>Medium</strong></h2>
+						<h2 style="margin-top: 30px;">Blog on <strong>Medium</strong></h2>
 					</div>
 				</div>
 			</div>
@@ -476,28 +481,13 @@
 		  filter: blur(30px);
 		  z-index: -1;
 		" alt="proj-background">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 mb-5">
-					<div class="section-heading text-center" style="font-size: 22px;">
-						<h2 style="font-size: 45px; margin-top: 20px">Get <strong>In-Touch</strong></h2>
-						<ul class="site-contact-details">
-
-							<span class="text-uppercase" style="color: #c2c2c2; font-size: 15px; margin-top:12%;">Email:
-								Amannino92@gmail.com</span>
-						</ul>
-					</div>
-				</div>
-
-
-			</div>
 		</div>
 	</section>
 
 	<footer class="site-footer">
 		<div class="container">
 			<div class="row mb-5">
-				<p class="col-12 text-center" style="margin-top: 0%;">
+				<p class="col-12 text-center" style="margin-top: -10%;">
 					Copyright Adam Mannino &copy;
 					<script>document.write(new Date().getFullYear());</script> All rights reserved
 				</p>
