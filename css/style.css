@@ -116,7 +116,7 @@ a:active {
 
 .nav-container-wrapper {
   position: fixed;
-  bottom: 27vh;
+  bottom: 35vh;
   right: 31%;
   z-index: 9999;
   opacity: 0;
@@ -141,7 +141,7 @@ a:active {
   gap: 75px; /* Adjust spacing between buttons in column layout */
   position: fixed;
   right: 60vw; /* Adjust position for column layout */
-  bottom: 2vh; /* Start outside the viewport */
+  top: -45vh; /* Start outside the viewport */
   transform: translateY(-50%); /* Center vertically */
   opacity: 0; /* Initially hidden */
   animation: none; /* Disable bobbing animation in column mode */
@@ -339,6 +339,42 @@ a:active {
   src: url('/fonts/landing.otf') format('opentype');
 }
 
+.scroll-down-wrapper {
+  position: absolute;
+  top: 24vh;
+  left:20.5vw;
+}
+
+.scroll-down-wrapper p {
+  font-family: Landing;
+  font-size: 20px;
+  color: #ffffff58;
+}
+
+.scroll-down-arrow {
+  width: 200px; /* Adjust size as needed */
+  height: auto;
+  animation: bounce 1.5s infinite; /* Add bounce effect */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(10px);
+  }
+}
+
 #section-home {
   position: relative;
 }
@@ -520,17 +556,6 @@ a:active {
   }
 }
 
-@keyframes bobbing {
-
-  0%,
-  100% {
-    transform: translateY(-5px);
-  }
-
-  50% {
-    transform: translateY(5px);
-  }
-}
 
 .btn {
   width: 60px;
@@ -1180,16 +1205,21 @@ i.fa {
   transition: all 0.2s ease-in-out;
 }
 
-
-
 .resume-item {
-  padding: 30px;
+  height: 200px;
+  padding: 10px;
   background: #333;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
   border: 4px solid transparent;
   border-radius: 7px;
+  margin-top: -15px;
+}
+
+.resume-item p {
+font-size: 14px !important;
+margin-top: -5px;
 }
 
 .resume-item .date {
@@ -1197,21 +1227,18 @@ i.fa {
   margin-bottom: 10px;
   font-size: 12px;
   font-weight: 700;
-  color: #fff;
+  color: #c2c2c2;
 }
 
 .resume-item .school {
   display: block;
-  font-size: 18px;
+  font-size: 15px;
+  color: #c2c2c2;
 }
 
 .resume-item h3 {
   color: #bac964;
-  font-size: 20px;
-}
-
-.resume-item .school {
-  color: white;
+  font-size: 16px;
 }
 
 .resume-item *:last-child {
@@ -1222,7 +1249,7 @@ i.fa {
 @media (max-width: 1980px) {
   .about-image {
     max-width: 70%;
-    border-radius: 100px;
+    border-radius: 25px;
     margin-left: 17%;
     margin-top: 5%
   }
