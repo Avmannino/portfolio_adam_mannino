@@ -116,10 +116,8 @@ a:active {
 
 .nav-container-wrapper {
   position: fixed;
-  top: 25vh;
-  /* Adjust vertical position */
-  right: 1vw;
-  /* Align to the right */
+  bottom: 27vh;
+  right: 31%;
   z-index: 9999;
   opacity: 0;
   animation: fadeInRight 1s ease-in-out;
@@ -129,46 +127,55 @@ a:active {
 
 .nav-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Default layout: row */
   justify-content: center;
   align-items: flex-end;
+  gap: 15px; /* Add spacing between buttons in row layout */
   animation: bobbing 8s infinite ease-in-out;
-  /* Bobbing animation for container */
   animation-delay: 3s !important;
+  transition: all 0.5s ease; /* Smooth transition for all changes */
+}
+
+.nav-container.column {
+  flex-direction: column; /* Change to column layout */
+  gap: 75px; /* Adjust spacing between buttons in column layout */
+  position: fixed;
+  right: 60vw; /* Adjust position for column layout */
+  bottom: 2vh; /* Start outside the viewport */
+  transform: translateY(-50%); /* Center vertically */
+  opacity: 0; /* Initially hidden */
+  animation: none; /* Disable bobbing animation in column mode */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transitions */
+}
+
+.nav-container.column.show {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Smoothly adjust position to visible */
 }
 
 .btn.nav-btn {
-  width: 170px;
-  /* Button width */
-  height: 70px;
-  /* Button height */
+  width: 110px;
+  height: 55px;
   background-color: #242363a5;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   font-family: Landing;
   text-align: center;
-  line-height: px;
-  /* Center text vertically */
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   box-shadow: 0 4px 40px rgba(255, 255, 255, 0.511);
   animation: bobbing 5s infinite ease-in-out;
-  /* Add bobbing animation */
   animation-delay: 3s !important;
 }
 
 .btn.nav-btn:hover {
   background-color: #685a8490;
-  /* Hover effect */
   transform: scale(1.2) !important;
-  /* Slightly enlarge on hover */
   box-shadow: 0 10px 35px rgba(255, 255, 255, 0.4);
 }
 
-/* Bobbing animation */
 @keyframes bobbing {
-
   0%,
   100% {
     transform: translateY(-5px);
@@ -179,7 +186,6 @@ a:active {
   }
 }
 
-/* Fade-in animation */
 @keyframes fadeInRight {
   from {
     opacity: 0;
@@ -192,22 +198,19 @@ a:active {
   }
 }
 
-/* Media Queries */
-@media (max-width: 1980px) {
+
+/* @media (max-width: 1980px) {
   .nav-container-wrapper .nav-container {
-    top: 2vh;
-    /* Adjust vertical position for smaller screens */
+    bottom: 20vh;
     right: 2vw;
-    /* Adjust right alignment */
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     gap: 80px !important;
   }
 
   .btn.nav-btn {
-    bottom: 20vh;
+    bottom: 30vh;
     width: 100px !important;
-    /* Reduce button size */
     height: 57px !important;
     font-size: 11.5px !important;
     box-shadow: 0 4px 25px rgba(255, 255, 255, 0.511);
@@ -218,19 +221,17 @@ a:active {
 @media (min-width: 2558px) {
   .nav-container-wrapper .nav-container {
     top: 250vh;
-    /* Further adjust for smaller screens */
     gap: 110px !important;
   }
 
   .btn.nav-btn {
     width: 135px;
-    /* Reduce button size further */
     height: 65px;
     gap: 130px !important;
     font-size: 16px;
     border-radius: 12px;
   }
-}
+} */
 
 
 
@@ -477,8 +478,8 @@ a:active {
 
 .socials-container {
   position: fixed;
-  top: -35vh;
-  left: -24vw;
+  top: -30vh;
+  left: 67vw;
   display: flex;
   flex-direction: column;
   gap: 90px;
@@ -907,7 +908,8 @@ i.fa {
 
 .filters ul {
   padding: 0;
-  margin: 0 0 0px 0;
+  margin-top: -70px !important;
+
 }
 
 .filters ul li {
@@ -928,20 +930,21 @@ i.fa {
 }
 
 .single-portfolio {
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   display: block;
 }
 
 .single-portfolio .relative {
   margin-bottom: 20px;
   width: 100%;
-  height: 145% !important;
+  height: 145%;
 }
 
 @media (max-width: 1980px) {
-  .single-portfolio .p-inner {
+  .single-portfolio {
     text-align: center;
-    font-size: 17px;
+    font-size: 16px !important;
+    width: 30%
   }
 }
 
@@ -952,6 +955,23 @@ i.fa {
   }
 }
 
+@media (max-width: 1980px) {
+  .proj-title {
+    text-align: center;
+    font-size: 18px !important;
+    font-family: Landing;
+    font-weight: bold;
+ 
+
+  }
+}
+
+@media (min-width: 2554px) {
+  .single-portfolio .p-inner {
+    text-align: center;
+    font-size: 19px;
+  }
+}
 
 /*--------- Start Portfolio Area -------------*/
 
@@ -964,10 +984,12 @@ i.fa {
 
 .portfolio-area .filters {
   text-align: center;
+  margin-bottom: 45px;
 }
 
 .portfolio-area .filters ul {
   padding: 0;
+  margin-bottom: 45px;
 }
 
 .portfolio-area .filters ul li {
@@ -1042,13 +1064,13 @@ i.fa {
   width: 150%;
 }
 
-/* .portfolio-area .filters-content .p-inner {
+.portfolio-area .filters-content .p-inner {
   padding: 20px 0px;
   text-align: center;
 }
 
 .portfolio-area .filters-content .item .p-inner .cat {
-  font-size: 13px;
+  font-size: 1px;
 } */
 
 /* .portfolio-area .filters-content .item img {
@@ -1098,28 +1120,30 @@ i.fa {
 
 
 @media (max-width: 1980px) {
-  .single-portfolio .image .desc .cat .p-inner .filters-content {
+  .single-portfolio .image img-fluid  .filters-content {
     position: relative;
     top: 0vh;
+    max-width: 550px;
   }
 }
 
 @media (min-width: 2556px) {
   .single-portfolio .image .desc .cat .p-inner .filters-content {
     position: relative;
-    top: 0vh
+    top: -2vh
   }
 }
 
 @media (max-width: 1980px) {
-  .section-heading h2 .h4 {
+  .section-heading h2 {
     position: relative;
-    top: 0vh;
+    top: -2vh;
+    font-size: 25px !important;
   }
 }
 
 @media (min-width: 2556px) {
-  .section-heading h2 .h4 {
+  .section-heading h2 {
     position: relative;
     top: 2vh
   }
@@ -1128,7 +1152,7 @@ i.fa {
 @media (max-width: 1980px) {
   .desc .cat .p-inner .filters-content {
     position: relative !important;
-    top: 10vh !important;
+    top: 1vh !important;
     font-size: 500px !important;
     text-align: center !important;
   }
