@@ -10,7 +10,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 .p1-gradient-bg,
 .thumb .overlay-bg {
   background: -moz-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
@@ -48,8 +47,6 @@ h5 {
   color: #c2c2c2;
   font-weight: 200;
 }
-
-
 
 h2 {
   font-size: 25px;
@@ -102,7 +99,6 @@ a:active {
   }
 }
 
-
 .cf:before,
 .cf:after {
   content: " ";
@@ -127,30 +123,30 @@ a:active {
 
 .nav-container {
   display: flex;
-  flex-direction: row; /* Default layout: row */
+  flex-direction: row;
   justify-content: center;
   align-items: flex-end;
-  gap: 15px; /* Add spacing between buttons in row layout */
+  gap: 15px;
   animation: bobbing 8s infinite ease-in-out;
   animation-delay: 3s !important;
-  transition: all 0.5s ease; /* Smooth transition for all changes */
+  transition: all 0.5s ease;
 }
 
 .nav-container.column {
-  flex-direction: column; /* Change to column layout */
-  gap: 75px; /* Adjust spacing between buttons in column layout */
+  flex-direction: column;
+  gap: 75px;
   position: fixed;
-  right: 60vw; /* Adjust position for column layout */
-  top: -45vh; /* Start outside the viewport */
-  transform: translateY(-50%); /* Center vertically */
-  opacity: 0; /* Initially hidden */
-  animation: none; /* Disable bobbing animation in column mode */
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transitions */
+  right: 60vw;
+  top: -45vh;
+  transform: translateY(-50%);
+  opacity: 0;
+  animation: none;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .nav-container.column.show {
-  opacity: 1; /* Fade in */
-  transform: translateY(0); /* Smoothly adjust position to visible */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .btn.nav-btn {
@@ -176,6 +172,7 @@ a:active {
 }
 
 @keyframes bobbing {
+
   0%,
   100% {
     transform: translateY(-5px);
@@ -197,7 +194,6 @@ a:active {
     transform: translateX(0);
   }
 }
-
 
 /* @media (max-width: 1980px) {
   .nav-container-wrapper .nav-container {
@@ -232,8 +228,6 @@ a:active {
     border-radius: 12px;
   }
 } */
-
-
 
 .site-hero {
   background-image: url(images/landing_background.png);
@@ -299,7 +293,6 @@ a:active {
   }
 }
 
-
 .letter-spacing {
   letter-spacing: 0.2rem;
   color: rgba(0, 200, 255, 0.668) !important;
@@ -342,7 +335,7 @@ a:active {
 .scroll-down-wrapper {
   position: absolute;
   top: 24vh;
-  left:20.5vw;
+  left: 20.5vw;
 }
 
 .scroll-down-wrapper p {
@@ -352,26 +345,30 @@ a:active {
 }
 
 .scroll-down-arrow {
-  width: 200px; /* Adjust size as needed */
+  width: 200px;
   height: auto;
-  animation: bounce 1.5s infinite; /* Add bounce effect */
+  animation: bounce 1.5s infinite;
 }
 
 @keyframes fadeIn {
   from {
-      opacity: 0;
+    opacity: 0;
   }
+
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes bounce {
-  0%, 100% {
-      transform: translateY(0);
+
+  0%,
+  100% {
+    transform: translateY(0);
   }
+
   50% {
-      transform: translateY(10px);
+    transform: translateY(10px);
   }
 }
 
@@ -556,7 +553,6 @@ a:active {
   }
 }
 
-
 .btn {
   width: 60px;
   height: 60px;
@@ -586,7 +582,6 @@ a:active {
     font-size: 25px;
   }
 }
-
 
 i.fa {
   display: flex;
@@ -708,7 +703,6 @@ i.fa {
   z-index: 10;
 }
 
-
 .section-heading h2 {
   position: relative;
   font-weight: 200;
@@ -823,17 +817,14 @@ i.fa {
 
 .email-link {
   color: #ffffff;
-  /* Default color */
   font-size: 18px;
   font-family: Landing;
   text-decoration: none;
   transition: color 0.3s ease;
-  /* Smooth transition */
 }
 
 .email-link:hover {
   color: #ffea00;
-  /* Color on hover */
 }
 
 .resume-button {
@@ -1095,8 +1086,9 @@ i.fa {
 
 .portfolio-area .filters-content .item .p-inner .cat {
   font-size: 1px;
-} */
+}
 
+*/
 /* .portfolio-area .filters-content .item img {
   width: 100%;
 } */
@@ -1142,9 +1134,8 @@ i.fa {
 }
 
 
-
 @media (max-width: 1980px) {
-  .single-portfolio .image img-fluid  .filters-content {
+  .single-portfolio .image img-fluid .filters-content {
     position: relative;
     top: 0vh;
     max-width: 550px;
@@ -1191,7 +1182,6 @@ i.fa {
   }
 }
 
-
 .single-portfolio:hover .thumb .overlay-bg {
   opacity: .85;
 }
@@ -1217,8 +1207,8 @@ i.fa {
 }
 
 .resume-item p {
-font-size: 14px !important;
-margin-top: -5px;
+  font-size: 14px !important;
+  margin-top: -5px;
 }
 
 .resume-item .date {
@@ -1280,10 +1270,6 @@ margin-top: -5px;
   }
 }
 
-
-
-
-
 .blog-entry {
   -webkit-transition: .1s all ease;
   -o-transition: .1s all ease;
@@ -1318,8 +1304,6 @@ margin-top: -5px;
 .blog-entry .blog-entry-text h3 a {
   color: #fff;
 }
-
-
 
 .blog-entry .meta {
   font-size: 14px;
