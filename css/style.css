@@ -112,12 +112,13 @@ a:active {
 
 .nav-container-wrapper {
   position: fixed;
-  bottom: 35vh;
-  right: 31%;
+  right: 35%;
   z-index: 9999;
   opacity: 0;
+  display: flex;
+  transform: translateX(-50%); /* Centering adjustment */
   animation: fadeInRight 1s ease-in-out;
-  animation-delay: 2s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -128,8 +129,9 @@ a:active {
   align-items: flex-end;
   gap: 15px;
   animation: bobbing 8s infinite ease-in-out;
-  animation-delay: 3s !important;
+  animation-delay: 1s !important;
   transition: all 0.5s ease;
+  width:auto;
 }
 
 .nav-container.column {
@@ -162,7 +164,7 @@ a:active {
   transition: all 0.1s ease-in-out;
   box-shadow: 0 4px 40px rgba(255, 255, 255, 0.511);
   animation: bobbing 5s infinite ease-in-out;
-  animation-delay: 3s !important;
+  animation-delay: 1s !important;
 }
 
 .btn.nav-btn:hover {
@@ -195,18 +197,40 @@ a:active {
   }
 }
 
-/* @media (max-width: 1980px) {
+@media (max-width: 1980px) {
   .nav-container-wrapper .nav-container {
-    bottom: 20vh;
-    right: 2vw;
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 80px !important;
+    position: fixed;
+    right:-4vw;
+    top: 11vh;
+    z-index: 9999;
+    opacity: 0;
+    display: flex;
+    transform: translateX(-50%); /* Centering adjustment */
+    animation: fadeInRight 1s ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .nav-container.column {
+    flex-direction: column;
+    gap: 65px;
+    position: fixed;
+    right: 54vw;
+    top: -33vh;
+    transform: translateY(-50%);
+    opacity: 0;
+    animation: none;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .nav-container.column.show {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .btn.nav-btn {
     bottom: 30vh;
-    width: 100px !important;
+    width: 120px !important;
     height: 57px !important;
     font-size: 11.5px !important;
     box-shadow: 0 4px 25px rgba(255, 255, 255, 0.511);
@@ -216,18 +240,44 @@ a:active {
 
 @media (min-width: 2558px) {
   .nav-container-wrapper .nav-container {
-    top: 250vh;
-    gap: 110px !important;
+    position: fixed;
+    right:-2vw;
+    top: 11vh;
+    z-index: 9999;
+    opacity: 0;
+    display: flex;
+    transform: translateX(-50%); /* Centering adjustment */
+    animation: fadeInRight 1s ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .nav-container.column {
+    flex-direction: column;
+    gap: 85px;
+    position: fixed;
+    right: 54vw;
+    top: -23vh;
+    transform: translateY(-50%);
+    opacity: 0;
+    animation: none;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .nav-container.column.show {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .btn.nav-btn {
-    width: 135px;
-    height: 65px;
-    gap: 130px !important;
-    font-size: 16px;
-    border-radius: 12px;
+    bottom: 30vh;
+    width: 140px !important;
+    height: 67px !important;
+    font-size: 15.5px !important;
+    box-shadow: 0 4px 25px rgba(255, 255, 255, 0.511);
+    border-radius: 10px;
   }
-} */
+}
 
 .site-hero {
   background-image: url(images/landing_background.png);
@@ -333,22 +383,42 @@ a:active {
 }
 
 .scroll-down-wrapper {
-  position: absolute;
-  top: 24vh;
-  left: 20.5vw;
+  position: fixed; /* Fixed position to stick to the viewport */
+  bottom: 20px; /* Distance from the bottom of the screen */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Centering adjustment */
+  display: flex; /* Flexbox for alignment */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: auto; /* Let it adjust dynamically */
 }
 
 .scroll-down-wrapper p {
   font-family: Landing;
   font-size: 20px;
   color: #ffffff58;
+  margin-bottom: 10px; /* Space between the text and the arrow */
 }
 
 .scroll-down-arrow {
-  width: 200px;
+  width: 200px; /* Set a relative size for responsiveness */
   height: auto;
   animation: bounce 1.5s infinite;
 }
+
+/* Optional: Add a media query for further responsiveness */
+@media (max-width: 768px) {
+  .scroll-down-arrow {
+    width: 40px; /* Smaller arrow for smaller screens */
+  }
+
+  .scroll-down-wrapper p {
+    font-size: 16px; /* Adjust text size for smaller screens */
+  }
+}
+
+
 
 @keyframes fadeIn {
   from {
